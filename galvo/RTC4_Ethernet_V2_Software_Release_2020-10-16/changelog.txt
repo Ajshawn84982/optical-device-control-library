@@ -1,0 +1,78 @@
+*******************************************************************************
+Release Date 2020-10-16
+*******************************************************************************
+
+* BUGFIX: Fix API for C# and VB.net
+    * Functions that wrap Delphi functions writing to LPSTR parameters are
+      now expected to get an IntPtr pointing to an unmanaged memory area
+      allocated by Marshal.AllocHGlobal. API for C# and VB.net is now
+      consistent.
+    * In the C/C++ API, const char* is now used for all ASCII strings
+      not being modified by the underlying Delphi function. (This was not
+      a bug but allows cleaner implementation of C++ wrappers)
+    * NIC search did not clear already found cards. Make sure found NICs
+      are only detected once each search.
+* FEATURE: Implement adaptive timeout algorithm for UDP communication
+    * Cards use the new adaptive algorithm until it is disabled by using
+      the old set_timeouts function.
+* File versions:
+    * RTC4eth_FW_2.0.6.bin:	        2.0.6.0
+    * RTC4netDLL.dll (new version): 2.2.0.0
+	* RTC4netDLLx64.dll (new version): 2.2.0.0
+	* RTC4ethConfig.exe:            2.1.0.0
+	* RTC4ethDLLx64.dll (new version): 4.83
+	* RTC4ethDLL.dll (new version): 4.83
+
+
+*******************************************************************************
+Release Date 2020-02-15
+*******************************************************************************
+
+* CHANGE: Implement Multiboard Support - Changes in User API
+    * The new ethernet firmware RTC4eth_FW_2.0.6.bin must be installed
+	  on the card to provide correct communications with the RTC4netDLL(x64).dll
+	* HPGL Converter is removed because it does currently not support the
+	  new DLL versions.
+* BUGFIX: Fix issues with datagram communication between card and host
+    * Fix card information retrieval on connection establishment
+      and status
+* File versions:
+    * RTC4eth_FW_2.0.6.bin (new version): 2.0.6.0
+	* RTC4netDLL.dll (new version): 2.1.0.0
+	* RTC4netDLLx64.dll (new version): 2.1.0.0
+	* RTC4ethConfig.exe (new version): 2.1.0.0
+	* RTC4ethDLLx64.dll (new version): 4.80
+	* RTC4ethDLL.dll (new version): 4.80
+
+	
+*******************************************************************************
+Release Date 2019-05-17
+*******************************************************************************
+
+* BUGFIX: The MCU firmware binary file was corrupt in the last package and an 
+          update could lead to an unreachable card.
+* CHANGE: Firmware and net-DLL increase the robustness against network 
+          disturbances during card release processes.
+* File versions:
+    * RTC4eth_FW_2.0.5.1.bin (new version): 2.0.5.1
+    * RTC4netDLL.dll (new version): 2.0.5.1
+    * RTC4netDLLx64.dll (new version): 2.0.5.1
+    
+
+*******************************************************************************
+Release Date 2018-11-16
+*******************************************************************************
+
+* first official release
+* NEW: this software package contains a new version of RTC4netDLL.dll/RTC4netDLLx64.dll.
+  This DLL is ONLY compatible with RTC4 Ethernet Card V2 (and vice versa)
+  This new version improves both ethernet performance and stability.
+* File versions:
+    * RTC4netDLL.dll (new version): 2.0.4.0
+    * RTC4netDLLx64.dll (new version): 2.0.4.0
+    * RTC4ethConfig.exe (new version): 2.0.0.1
+    * RTC4ethDLL.dll (unchanged): 4.64
+    * RTC4ethDLLx64.dll (unchanged): 4.64
+    * RTC4ethDLLx64.dll (unchanged): 4.64
+
+
