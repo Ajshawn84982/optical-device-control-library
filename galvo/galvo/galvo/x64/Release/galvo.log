@@ -1,0 +1,10 @@
+﻿  galvo.cpp
+D:\driver\galvo\scanlab\galvo\galvo\galvo.cpp(93,23): warning C4101: 'pos': unreferenced local variable
+D:\driver\galvo\scanlab\galvo\galvo\galvo.cpp(43,11): warning C4101: 'itest': unreferenced local variable
+D:\driver\galvo\scanlab\galvo\galvo\galvo.cpp(93,17): warning C4101: 'busy': unreferenced local variable
+  Generating code
+  1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  galvo.vcxproj -> D:\driver\galvo\scanlab\galvo\x64\Release\galvo.exe
